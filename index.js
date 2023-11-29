@@ -19,10 +19,10 @@ app.use(express.json())
 
 // Rotas
 app.get('/', home)
-app.get('/users', getUsers)
+app.get('/user', getUsers)
 app.get('/user/:id', getUser)
-app.post('/add-user', registerUser)
-app.put('/user/:id', updateUser)
+app.post('/user', registerUser)
+app.patch('/user/:id', updateUser)
 app.delete('/user/:id', deleteUser)
 
 // Iniciando servidor

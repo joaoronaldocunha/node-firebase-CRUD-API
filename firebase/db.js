@@ -14,9 +14,9 @@ import {
 const db = getFirestore(app)
 
 async function addUser(data) {
-    const { username, pass } = data
+    const { name, email, age } = data
 
-    const userData = { username, pass }
+    const userData = { name, email, age }
 
     try {
         const docRef = await addDoc(collection(db, "users"), userData)
